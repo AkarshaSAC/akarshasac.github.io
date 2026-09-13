@@ -510,6 +510,267 @@
             color: var(--primary);
         }
 
+        /* FEATURED FLAGSHIP PROJECT & MEDIA GALLERY */
+        .project-card-featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(145deg, #131d33, #0b1120);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .project-card-featured:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .project-featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        @media (max-width: 960px) {
+            .project-featured-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-category-tag {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* GALLERY STYLES */
+        .project-gallery-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-main-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #090e1a;
+            border: 1px solid var(--border-color);
+            aspect-ratio: 16 / 10;
+            cursor: pointer;
+        }
+
+        .gallery-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-main-container:hover .gallery-main-img {
+            transform: scale(1.02);
+            filter: brightness(1.05);
+        }
+
+        .gallery-badge-overlay {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            font-size: 0.76rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            pointer-events: none;
+        }
+
+        .gallery-caption {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin: 10px 0 14px 0;
+            line-height: 1.45;
+            min-height: 2.5em;
+        }
+
+        .gallery-thumbs-row {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+        }
+
+        .gallery-thumbs-row::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .gallery-thumbs-row::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        .thumb-item {
+            flex: 0 0 68px;
+            height: 48px;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            opacity: 0.55;
+            transition: all 0.2s ease;
+        }
+
+        .thumb-item:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .thumb-item.active {
+            border-color: var(--primary);
+            opacity: 1;
+            box-shadow: 0 0 8px var(--primary-glow);
+        }
+
+        .thumb-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* TECH SPEC PILLS */
+        .tech-spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .spec-pill {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .spec-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .spec-val {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .deep-dive-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .deep-dive-list li {
+            position: relative;
+            padding-left: 18px;
+            border-left: 2px solid rgba(59, 130, 246, 0.4);
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .deep-dive-list li strong {
+            color: #ffffff;
+        }
+
+        /* LIGHTBOX MODAL */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 7, 18, 0.92);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-content-wrap {
+            max-width: 90vw;
+            max-height: 80vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-caption {
+            margin-top: 14px;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .lightbox-close-btn {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .lightbox-close-btn:hover {
+            background: var(--primary);
+        }
+
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.3rem; }
@@ -630,21 +891,97 @@
         </div>
 
         <div class="projects-grid">
-            <!-- Project 1: FalconE Racing -->
-            <div class="project-card" id="falcone">
-                <div class="project-header-row">
-                    <h3>FalconE Racing — Formula Student EV</h3>
-                    <span class="project-badge">FSS 2026 Spain</span>
-                </div>
-                <div class="project-tools-line">Altium, KiCAD, RapidHarness, Soldering(SMD, TH), 600V HV</div>
-                <div class="project-block">
-                    Working as a team member of the electronics subsystem for an electric formula race car competing internationally.
-                </div>
-                <div class="project-block">
-                    <strong>Contribution:</strong> Designed and developed the vehicle wiring harness and custom PCBs. Built custom testing apparatuses for IMD and BSPD. Managed the 600V high-voltage battery system and debugging process to ensure strict competition rule compliance.
-                </div>
-                <div class="project-outcome-box">
-                    <strong>Outcome:</strong> Successfully competed as a team at Formula Student Spain 2026 (Overall 28th Place).
+            <!-- Project 1: FalconE Racing (Flagship Project with Media Gallery) -->
+            <div class="project-card project-card-featured" id="falcone">
+                <div class="project-featured-grid">
+                    <!-- Left Column: Interactive Media Showcase -->
+                    <div class="project-gallery-wrap">
+                        <div class="gallery-main-container" onclick="openLightbox(document.getElementById('falcone-main-img'))">
+                            <img id="falcone-main-img" src="assets/falcone/harness-assembly-fabrication.jpg" alt="FalconE Wiring Harness 1:1 Scale Fabrication" class="gallery-main-img">
+                            <div class="gallery-badge-overlay">🔍 Click to enlarge</div>
+                        </div>
+                        <div class="gallery-caption" id="falcone-caption">
+                            Physical Harness Fabrication: Modular branching, Raychem DR-25 heat shrink, automotive connectors on 1:1 jig board.
+                        </div>
+                        <div class="gallery-thumbs-row">
+                            <div class="thumb-item active" onclick="swapGalleryImage('falcone', 'assets/falcone/harness-assembly-fabrication.jpg', 'Physical Harness Fabrication: Modular branching, Raychem DR-25 heat shrink, automotive connectors on 1:1 jig board.')">
+                                <img src="assets/falcone/harness-assembly-fabrication.jpg" alt="Harness Fabrication">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('falcone', 'assets/falcone/harness-pin-board-layout.jpg', '1:1 Scale Pin-Board Layout: Scaled technical drawings plotted across tiled A1 sheets on workshop assembly jig.')">
+                                <img src="assets/falcone/harness-pin-board-layout.jpg" alt="Pin Board Layout">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('falcone', 'assets/falcone/imd-testing-apparatus.jpg', 'Custom IMD Testing Apparatus: 3D-printed enclosure with insulated high-voltage test leads built for safety compliance.')">
+                                <img src="assets/falcone/imd-testing-apparatus.jpg" alt="IMD Testing Apparatus">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('falcone', 'assets/falcone/vehicle-high-voltage-integration.jpg', 'Formula Student EV High-Voltage Accumulator, Master Switch & Emergency Stop electrical integration.')">
+                                <img src="assets/falcone/vehicle-high-voltage-integration.jpg" alt="HV Vehicle Integration">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('falcone', 'assets/falcone/chassis-tubular-frame.jpg', 'FalconE Tubular Spaceframe Chassis in the workshop on racing slicks.')">
+                                <img src="assets/falcone/chassis-tubular-frame.jpg" alt="Racecar Spaceframe">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Engineering Details -->
+                    <div class="project-details-wrap">
+                        <div class="project-header-row">
+                            <div>
+                                <span class="project-category-tag">🏎️ Formula Student Electric (Spain 2026)</span>
+                                <h3 style="font-size: 1.45rem;">FalconE Racing — Formula Student EV</h3>
+                            </div>
+                            <span class="project-badge">Overall 28th (FSS 2026)</span>
+                        </div>
+                        
+                        <div class="project-tools-line">
+                            RapidHarness • Automotive Ratchet Crimping • 600V HV Bus • Raychem DR-25 • IMD & BSPD Validation
+                        </div>
+
+                        <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
+                            Working as a key team member of the electronics subsystem for <strong>FalconE Racing</strong> (University of Moratuwa), competing internationally at <strong>Formula Student Spain (FSS) 2026</strong>. Spearheaded the complete reverse engineering and fabrication of the vehicle wiring harness and custom safety testing apparatuses.
+                        </div>
+
+                        <!-- Technical Highlights Grid -->
+                        <div class="tech-spec-grid">
+                            <div class="spec-pill">
+                                <span class="spec-label">Vehicle Class</span>
+                                <span class="spec-val">Formula Student EV</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Tractive System</span>
+                                <span class="spec-val">600V DC HV Bus</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Harness Tooling</span>
+                                <span class="spec-val">1:1 Scale Pin Board</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Safety Scrutineering</span>
+                                <span class="spec-val">IMD & BSPD Tested</span>
+                            </div>
+                        </div>
+
+                        <!-- Deep Dive Engineering Contributions -->
+                        <div class="project-deep-dive">
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                🔧 Key Engineering Contributions:
+                            </h4>
+                            <ul class="deep-dive-list">
+                                <li>
+                                    <strong>Harness Reverse Engineering & 1:1 Scale Fabrication:</strong> Audited and disassembled the undocumented legacy vehicle harness. Traced and verified all electrical circuits using DMM continuity testing, mapped out complete CAD documentation in RapidHarness, and measured precise wire paths using thread simulation along chassis reference points. Plotted full-scale 1:1 drawings across three tiled A1 sheets on a physical assembly pin-board for precision wire lacing, ratchet crimping, and Raychem DR-25 heat-shrink protection.
+                                </li>
+                                <li>
+                                    <strong>Custom IMD Hardware Testing Apparatus:</strong> Designed and 3D-printed a dedicated, portable hardware testing apparatus with insulated high-voltage test leads to simulate chassis isolation faults and rigorously validate the Bender Insulation Monitoring Device (IMD) and hardwired Brake System Plausibility Device (BSPD) in strict compliance with Formula Student safety rules.
+                                </li>
+                                <li>
+                                    <strong>Next-Generation E3 Modular Architecture Proposal:</strong> Formulated a clean-sheet 4-unit low-voltage architecture (Safety System Unit, Vehicle Control Unit, Power Distribution Unit, Driver Interface Unit) utilizing mezzanine board-to-board connectors and backplane topologies to reduce external wiring, suppress EMI, and enable rapid trackside debugging.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-outcome-box" style="margin-top: 18px;">
+                            <strong>Competition Outcome:</strong> Successfully passed rigorous electrical and mechanical technical scrutineering at Circuit de Barcelona-Catalunya (Formula Student Spain 2026), achieving an <strong>Overall 28th Place</strong> finish among premier global university teams.
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -914,5 +1251,69 @@
         <div>Designed for Sooriya Arachchige Chirantha Akarsha &copy; 2026. Hosted on GitHub Pages.</div>
     </footer>
 
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <div class="lightbox-content-wrap" onclick="event.stopPropagation()">
+            <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+            <img id="lightboxImg" class="lightbox-img" src="" alt="Full view">
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR GALLERIES & LIGHTBOX -->
+    <script>
+        function swapGalleryImage(projectId, imgSrc, captionText) {
+            const mainImg = document.getElementById(projectId + '-main-img');
+            const captionEl = document.getElementById(projectId + '-caption');
+            if (mainImg) {
+                mainImg.src = imgSrc;
+            }
+            if (captionEl) {
+                captionEl.textContent = captionText;
+            }
+            // Update active thumbnail state
+            const wrap = mainImg.closest('.project-gallery-wrap');
+            if (wrap) {
+                const thumbs = wrap.querySelectorAll('.thumb-item');
+                thumbs.forEach(t => {
+                    const img = t.querySelector('img');
+                    if (img && img.getAttribute('src') === imgSrc) {
+                        t.classList.add('active');
+                    } else {
+                        t.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        function openLightbox(imgElement) {
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImg');
+            const modalCaption = document.getElementById('lightboxCaption');
+            if (modal && modalImg) {
+                modalImg.src = imgElement.src;
+                const captionEl = document.getElementById('falcone-caption');
+                if (modalCaption && captionEl) {
+                    modalCaption.textContent = captionEl.textContent;
+                }
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>

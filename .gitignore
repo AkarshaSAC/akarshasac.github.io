@@ -1,0 +1,9 @@
+﻿*.docx
+*.doc
+*.xlsx
+*.xls
+*confidential*
+*Confidential*
+.DS_Store
+Thumbs.db
+extracted/
