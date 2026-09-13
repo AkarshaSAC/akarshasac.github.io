@@ -985,21 +985,94 @@
                 </div>
             </div>
 
-            <!-- Project 2: Rho Solutions -->
-            <div class="project-card" id="rhosolutions">
-                <div class="project-header-row">
-                    <h3>Co-Founder, Rho Solutions (Startup) — Automated Rapid Prototyping (3D Printing) Platform</h3>
-                    <a href="https://rhosolutions.lk" target="_blank" class="project-badge" style="text-decoration: none; color: inherit;">🌐 rhosolutions.lk ↗</a>
-                </div>
-                <div class="project-tools-line">Python, Machine Learning, Web Dev, 3D Printing</div>
-                <div class="project-block">
-                    Co-founded a startup requiring a streamlined digital infrastructure for instant customer quoting and order processing.
-                </div>
-                <div class="project-block">
-                    <strong>Contribution:</strong> Built a full-stack web application (<a href="https://rhosolutions.lk" target="_blank" style="color: var(--primary); text-decoration: underline;">rhosolutions.lk</a>) for order tracking and invoicing. Engineered a machine learning model (Random Forest/XGBoost on Thingi10K dataset) to estimate 3D printing prices from STL geometry without slicer software.
-                </div>
-                <div class="project-outcome-box">
-                    <strong>Outcome:</strong> Launched a fully functional business platform automating customer workflows.
+            <!-- Project 2: Rho Solutions (Flagship Startup with Media Gallery) -->
+            <div class="project-card project-card-featured" id="rhosolutions">
+                <div class="project-featured-grid">
+                    <!-- Left Column: Interactive Media Showcase -->
+                    <div class="project-gallery-wrap">
+                        <div class="gallery-main-container" onclick="openLightbox(document.getElementById('rhosolutions-main-img'))">
+                            <img id="rhosolutions-main-img" src="assets/rhosolutions/rhosolutions-live-platform.png" alt="RHO Solutions Live Production Platform" class="gallery-main-img">
+                            <div class="gallery-badge-overlay">🔍 Click to enlarge</div>
+                        </div>
+                        <div class="gallery-caption" id="rhosolutions-caption">
+                            Production Platform (rhosolutions.lk): Real-time web quotation engine, anonymous STL cart, and automated order processing.
+                        </div>
+                        <div class="gallery-thumbs-row">
+                            <div class="thumb-item active" onclick="swapGalleryImage('rhosolutions', 'assets/rhosolutions/rhosolutions-live-platform.png', 'Production Platform (rhosolutions.lk): Real-time web quotation engine, anonymous STL cart, and automated order processing.')">
+                                <img src="assets/rhosolutions/rhosolutions-live-platform.png" alt="Live Platform">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('rhosolutions', 'assets/rhosolutions/rhosolutions-services-overview.png', 'End-to-End Workflow: 3D printing configuration, transparent tiered pricing, and WhatsApp integration.')">
+                                <img src="assets/rhosolutions/rhosolutions-services-overview.png" alt="Services Overview">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('rhosolutions', 'assets/rhosolutions/rho-brand-banner.png', 'RHO Solutions Brand: Robust. Hyper. Optimized. Rapid prototyping and digital manufacturing.')">
+                                <img src="assets/rhosolutions/rho-brand-banner.png" alt="Brand Banner">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('rhosolutions', 'assets/rhosolutions/rho-logo-3d.png', 'RHO Solutions 3D Embossed Emblem: Engineering rapid prototyping identity.')">
+                                <img src="assets/rhosolutions/rho-logo-3d.png" alt="3D Logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Engineering & Startup Details -->
+                    <div class="project-details-wrap">
+                        <div class="project-header-row">
+                            <div>
+                                <span class="project-category-tag">🚀 Entrepreneurship & Applied Machine Learning</span>
+                                <h3 style="font-size: 1.45rem;">Co-Founder, Rho Solutions (Startup) — Automated Rapid Prototyping (3D Printing) Platform</h3>
+                            </div>
+                            <a href="https://rhosolutions.lk" target="_blank" class="project-badge" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 4px;">🌐 rhosolutions.lk ↗</a>
+                        </div>
+                        
+                        <div class="project-tools-line">
+                            Python • Machine Learning (Scikit-Learn / XGBoost) • Next.js • Docker • Trimesh • Creality SPARKX i7
+                        </div>
+
+                        <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
+                            Co-founded an engineering rapid-prototyping startup offering on-demand 3D printing and digital manufacturing solutions. Spearheaded the digital infrastructure and core computational intelligence to automate quoting, order processing, and manufacturing cost estimation.
+                        </div>
+
+                        <!-- Technical Highlights Grid -->
+                        <div class="tech-spec-grid">
+                            <div class="spec-pill">
+                                <span class="spec-label">Platform Role</span>
+                                <span class="spec-val">Co-Founder & Lead Dev</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">ML Core</span>
+                                <span class="spec-val">Random Forest & XGBoost</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Dataset</span>
+                                <span class="spec-val">Thingi10K (10,000+ STLs)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Inference Latency</span>
+                                <span class="spec-val">&lt; 50ms Instant Quote</span>
+                            </div>
+                        </div>
+
+                        <!-- Deep Dive Engineering Contributions -->
+                        <div class="project-deep-dive">
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                💡 Key Engineering Contributions:
+                            </h4>
+                            <ul class="deep-dive-list">
+                                <li>
+                                    <strong>Machine Learning Cost & Time Predictor:</strong> Engineered a computational geometry feature extraction pipeline using <code>trimesh</code> to extract 3D mesh primitives (volume, surface area, bounding box, convexity, overhangs, triangle count). Trained Random Forest and XGBoost regressors on the <strong>Thingi10K dataset</strong> with ground-truth slice data from OrcaSlicer to predict filament mass and print time within milliseconds—bypassing traditional CPU-heavy slicer bottlenecks.
+                                </li>
+                                <li>
+                                    <strong>Full-Stack Production Infrastructure:</strong> Architected and deployed the production web platform (<a href="https://rhosolutions.lk" target="_blank" style="color: var(--primary); text-decoration: underline;">rhosolutions.lk</a>) built with Next.js, Docker Compose, and Caddy reverse proxy on cloud infrastructure. Designed an anonymous quotation builder allowing prospective clients to upload and configure models on the fly.
+                                </li>
+                                <li>
+                                    <strong>Automated Workflow & Order Lifecycle:</strong> Automated the end-to-end customer journey from instant geometric quote generation and verified user carts to pre-filled WhatsApp confirmation and live dashboard production tracking.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-outcome-box" style="margin-top: 18px;">
+                            <strong>Business & Engineering Outcome:</strong> Successfully launched a revenue-generating commercial platform (<a href="https://rhosolutions.lk" target="_blank" style="color: #6ee7b7; text-decoration: underline; font-weight: 700;">rhosolutions.lk</a>) that reduced quote turnaround from hours to under 3 seconds, serving engineering students and commercial clients across Sri Lanka.
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1292,9 +1365,12 @@
             const modalCaption = document.getElementById('lightboxCaption');
             if (modal && modalImg) {
                 modalImg.src = imgElement.src;
-                const captionEl = document.getElementById('falcone-caption');
+                const wrap = imgElement.closest('.project-gallery-wrap');
+                const captionEl = wrap ? wrap.querySelector('.gallery-caption') : null;
                 if (modalCaption && captionEl) {
                     modalCaption.textContent = captionEl.textContent;
+                } else if (modalCaption) {
+                    modalCaption.textContent = imgElement.alt || '';
                 }
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
