@@ -1286,14 +1286,14 @@
                             <div class="thumb-item active" onclick="openLightbox('assets/scara/scara-video-poster.jpg', 'Electromagnetic Pick-and-Place: Arm positioning directly over target blue circular shape on indexed sorting platter.')">
                                 <img src="assets/scara/scara-video-poster.jpg" alt="Pick Action">
                             </div>
-                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-electromechanical-kinematics.jpg', 'Presentation Slide 4: Electro-Mechanical System &amp; Analytical Inverse Kinematics (Chirantha Akarsha — Subsystem Ownership).')">
-                                <img src="assets/scara/scara-slide-electromechanical-kinematics.jpg" alt="Slide 4: Electro-Mechanical System">
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-electromechanical-kinematics.jpg', 'Electro-Mechanical Architecture &amp; Analytical Inverse Kinematics (Arduino Uno C++ Engine).')">
+                                <img src="assets/scara/scara-slide-electromechanical-kinematics.jpg" alt="Electro-Mechanical System">
                             </div>
-                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-components.jpg', 'Presentation Slide 3: Mechatronics Hardware Architecture &amp; 4-Axis Actuation Stack (Arduino, CNC Shield, A4988, NEMA 17, Electromagnet).')">
-                                <img src="assets/scara/scara-slide-components.jpg" alt="Slide 3: System Components">
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-components.jpg', 'System Components &amp; Hardware Stack (Arduino, CNC Shield, A4988 Drivers, NEMA 17 Steppers, Electromagnet).')">
+                                <img src="assets/scara/scara-slide-components.jpg" alt="System Components">
                             </div>
-                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-authorship.jpg', 'Presentation Slide 1: University Presentation Authorship — 230028A - Akarsha S. A. C.')">
-                                <img src="assets/scara/scara-slide-authorship.jpg" alt="Slide 1: Presentation Authorship">
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-authorship.jpg', 'University Mechatronics Project Presentation (Akarsha S. A. C. - 230028A).')">
+                                <img src="assets/scara/scara-slide-authorship.jpg" alt="Project Authorship">
                             </div>
                             <div class="thumb-item" onclick="openLightbox('assets/scara/scara-hardware-arm-platter.jpg', 'SCARA 3-DOF Arm Assembly: Vertical lead screw prismatic Z-axis, dual revolute joints, and circular sorting workspace.')">
                                 <img src="assets/scara/scara-hardware-arm-platter.jpg" alt="Hardware Assembly">
@@ -1348,32 +1348,32 @@
                             </div>
                         </div>
 
-                        <!-- Highlighted Subsystem Contributions (Backed by Presentation Slides) -->
+                        <!-- Highlighted Subsystem Contributions -->
                         <div class="project-deep-dive">
                             <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
                                 ⚙️ Personal Engineering Ownership &amp; Subsystem Contributions:
                             </h4>
                             <ul class="deep-dive-list">
                                 <li>
-                                    <strong>Analytical Inverse Kinematics (Arduino C++):</strong> Derived closed-form planar geometric inverse kinematics equations to map Cartesian coordinates $(x, y)$ into dual revolute joint angles (&theta;1, &theta;2) and vertical lead-screw step counts. Programmed the kinematics calculation engine directly on the Arduino Uno microcontroller for real-time trajectory execution <em>(Presentation Slide 4)</em>.
+                                    <strong>Analytical Inverse Kinematics (Arduino C++):</strong> Derived closed-form planar geometric inverse kinematics equations to map Cartesian coordinates $(x, y)$ into dual revolute joint angles (&theta;1, &theta;2) and vertical lead-screw step counts. Programmed the kinematics calculation engine directly on the Arduino Uno microcontroller for real-time trajectory execution.
                                 </li>
                                 <li>
-                                    <strong>Microcontroller-to-Edge Serial Communication Bridge:</strong> Architected the UART serial communication protocol linking the Arduino Uno to the vision-processing Raspberry Pi 4. Structured the packet parsing to ingest target object coordinates, geometric shape classes, and color labels in real time <em>(Presentation Slide 4)</em>.
+                                    <strong>Microcontroller-to-Edge Serial Communication Bridge:</strong> Architected the UART serial communication protocol linking the Arduino Uno to the vision-processing Raspberry Pi 4. Structured the packet parsing to ingest target object coordinates, geometric shape classes, and color labels in real time.
                                 </li>
                                 <li>
-                                    <strong>4-Axis Stepper &amp; Turntable Drive Train:</strong> Configured an Arduino CNC Shield with 4 A4988 drivers to synchronously drive 4 NEMA 17 stepper motors: two revolute arm axes, a precision vertical lead-screw Z-axis running on linear guide bearings, and an indexed 9-slot turntable platter mounted on 3mm steel ball bearings to rotate targeted items into reachable workspace <em>(Presentation Slides 3 &amp; 4)</em>.
+                                    <strong>4-Axis Stepper &amp; Turntable Drive Train:</strong> Configured an Arduino CNC Shield with 4 A4988 drivers to synchronously drive 4 NEMA 17 stepper motors: two revolute arm axes, a precision vertical lead-screw Z-axis running on linear guide bearings, and an indexed 9-slot turntable platter mounted on 3mm steel ball bearings to rotate targeted items into reachable workspace.
                                 </li>
                                 <li>
-                                    <strong>Electromagnetic End-Effector Pick-and-Place Cycle:</strong> Engineered and integrated a switched 12V electromagnetic end-effector circuit. Formulated the state-machine sequence to lower the arm along the Z-axis, energize the solenoid to grip ferrous geometric objects, elevate and traverse to sorting drop-off bins, de-energize to release, and execute homing retraction <em>(Presentation Slide 4)</em>.
+                                    <strong>Electromagnetic End-Effector Pick-and-Place Cycle:</strong> Engineered and integrated a switched 12V electromagnetic end-effector circuit. Formulated the state-machine sequence to lower the arm along the Z-axis, energize the solenoid to grip ferrous geometric objects, elevate and traverse to sorting drop-off bins, de-energize to release, and execute homing retraction.
                                 </li>
                                 <li>
-                                    <strong>Full Mechatronic System Integration:</strong> Partnered across the 5-member engineering team to integrate the physical actuation subsystem with the overhead YOLOv11 deep learning model (trained on ~100 multi-angle images, Slide 5) and the PHP/SQLite web dispatch portal featuring OTP authentication (Slide 6), delivering an autonomous end-to-end sorting pipeline.
+                                    <strong>Full Mechatronic System Integration:</strong> Partnered across the 5-member engineering team to integrate the physical actuation subsystem with the overhead YOLOv11 deep learning model (trained on ~100 multi-angle images) and the PHP/SQLite web dispatch portal featuring OTP authentication, delivering an autonomous end-to-end sorting pipeline.
                                 </li>
                             </ul>
                         </div>
 
                         <div class="project-outcome-box" style="margin-top: 18px;">
-                            <strong>Engineering Outcome &amp; University Presentation:</strong> Delivered a fully operational mechatronic sorting cell verified across multiple test cycles with zero manual intervention. Co-presented findings for University of Moratuwa Mechatronic Systems Engineering (Presentation Authorship: Akarsha S. A. C. - 230028A, Slide 1).
+                            <strong>Engineering Outcome:</strong> Delivered a fully operational mechatronic sorting cell verified across multiple test cycles with zero manual intervention. Co-presented findings for University of Moratuwa Mechatronic Systems Engineering (Akarsha S. A. C. - 230028A).
                         </div>
                     </div>
                 </div>
@@ -1389,32 +1389,32 @@
                             <div class="gallery-badge-overlay">🔍 Click to enlarge</div>
                         </div>
                         <div class="gallery-caption" id="bicycle-caption">
-                            Live Telemetry Web Dashboard: Real-time telemetry monitoring speed, distance, pitch/roll orientation, heart rate, and power with &lt;3s sync latency (Presentation Slide 47).
+                            Live Telemetry Web Dashboard: Real-time telemetry monitoring speed, distance, pitch/roll orientation, heart rate, and power with &lt;3s sync latency.
                         </div>
                         <div class="gallery-thumbs-row">
-                            <div class="thumb-item active" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg', 'Presentation Slide 47: Live Telemetry Web Dashboard (Real-time speed, distance, pitch, roll, heart rate, and power monitoring with &lt;3s latency).')">
-                                <img src="assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg" alt="Slide 47: Live Dashboard">
+                            <div class="thumb-item active" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg', 'Live Telemetry Web Dashboard: Real-time speed, distance, pitch, roll, heart rate, and power monitoring with &lt;3s latency.')">
+                                <img src="assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg" alt="Live Dashboard">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-19-kalman-filter-fusion.jpg', 'Presentation Slide 19: Sensor Fusion using Kalman Filter (Fusing MPU 9250 accelerometer and gyroscope to eliminate road vibration noise and angular drift).')">
-                                <img src="assets/bicycle/bicycle-slide-19-kalman-filter-fusion.jpg" alt="Slide 19: Kalman Fusion">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-19-kalman-filter-fusion.jpg', 'Sensor Fusion using Kalman Filter: Fusing MPU 9250 accelerometer and gyroscope to eliminate road vibration noise and angular drift.')">
+                                <img src="assets/bicycle/bicycle-slide-19-kalman-filter-fusion.jpg" alt="Kalman Fusion">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-20-kalman-pitch-roll-plots.jpg', 'Presentation Slide 20: Real-Time Pitch &amp; Roll Angle Waveforms after Kalman Filter Processing.')">
-                                <img src="assets/bicycle/bicycle-slide-20-kalman-pitch-roll-plots.jpg" alt="Slide 20: Pitch/Roll Waveforms">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-20-kalman-pitch-roll-plots.jpg', 'Real-Time Pitch &amp; Roll Angle Waveforms after Kalman Filter Processing.')">
+                                <img src="assets/bicycle/bicycle-slide-20-kalman-pitch-roll-plots.jpg" alt="Pitch/Roll Waveforms">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-21-kalman-roll-vs-actual.jpg', 'Presentation Slide 21: Kalman Filtered Roll Angle vs Real Angle Validation (Noise rejection &amp; zero drift).')">
-                                <img src="assets/bicycle/bicycle-slide-21-kalman-roll-vs-actual.jpg" alt="Slide 21: Kalman vs Actual">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-21-kalman-roll-vs-actual.jpg', 'Kalman Filtered Roll Angle vs Real Angle Validation (Noise rejection &amp; zero drift).')">
+                                <img src="assets/bicycle/bicycle-slide-21-kalman-roll-vs-actual.jpg" alt="Kalman vs Actual">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-43-espnow-wireless.jpg', 'Presentation Slide 43: Multi-Node Wireless Telemetry via ESP-NOW (3 Senders &rarr; 1 Receiver star network, 2&ndash;10 ms ultra-low latency, routerless).')">
-                                <img src="assets/bicycle/bicycle-slide-43-espnow-wireless.jpg" alt="Slide 43: ESP-NOW Wireless">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-43-espnow-wireless.jpg', 'Multi-Node Wireless Telemetry via ESP-NOW (3 Senders &rarr; 1 Receiver star network, 2&ndash;10 ms ultra-low latency, routerless).')">
+                                <img src="assets/bicycle/bicycle-slide-43-espnow-wireless.jpg" alt="ESP-NOW Wireless">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-45-firebase-cloud-logging.jpg', 'Presentation Slide 45: Google Firebase Realtime Database Cloud Sync with Timestamped Ride History &amp; Auto-Reconnect.')">
-                                <img src="assets/bicycle/bicycle-slide-45-firebase-cloud-logging.jpg" alt="Slide 45: Firebase Cloud">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-45-firebase-cloud-logging.jpg', 'Google Firebase Realtime Database Cloud Sync with Timestamped Ride History &amp; Auto-Reconnect.')">
+                                <img src="assets/bicycle/bicycle-slide-45-firebase-cloud-logging.jpg" alt="Firebase Cloud">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-48-graphs-and-tables.jpg', 'Presentation Slide 48: Interactive Telemetry Graphs (Chart.js) and Live Tabular Data Tables.')">
-                                <img src="assets/bicycle/bicycle-slide-48-graphs-and-tables.jpg" alt="Slide 48: Graphs &amp; Tables">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-48-graphs-and-tables.jpg', 'Interactive Telemetry Graphs (Chart.js) and Live Tabular Data Tables.')">
+                                <img src="assets/bicycle/bicycle-slide-48-graphs-and-tables.jpg" alt="Graphs &amp; Tables">
                             </div>
-                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-1-title.jpg', 'Presentation Slide 1: University Instrumentation System Design Project Title Slide.')">
-                                <img src="assets/bicycle/bicycle-slide-1-title.jpg" alt="Slide 1: Project Title">
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-1-title.jpg', 'University Instrumentation System Design Project Overview.')">
+                                <img src="assets/bicycle/bicycle-slide-1-title.jpg" alt="Project Overview">
                             </div>
                         </div>
                     </div>
@@ -1460,23 +1460,23 @@
                             </div>
                         </div>
 
-                        <!-- Highlighted Subsystem Contributions (Backed by Presentation Slides) -->
+                        <!-- Highlighted Subsystem Contributions -->
                         <div class="project-deep-dive">
                             <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
                                 ⚙️ Personal Engineering Ownership &amp; Subsystem Contributions:
                             </h4>
                             <ul class="deep-dive-list">
                                 <li>
-                                    <strong>Kalman Filter Sensor Fusion (Orientation &amp; Acceleration):</strong> Modeled and implemented a real-time Kalman filter on the MPU 9250 IMU to fuse 3-axis accelerometer gravity vectors with 3-axis rate gyroscope integration. Successfully filtered out severe high-frequency road vibrations and mechanical frame chatter while eliminating cumulative gyroscopic drift, calculating true continuous pitch and roll dynamic angles during rides <em>(Presentation Slides 19, 20 &amp; 21)</em>.
+                                    <strong>Kalman Filter Sensor Fusion (Orientation &amp; Acceleration):</strong> Modeled and implemented a real-time Kalman filter on the MPU 9250 IMU to fuse 3-axis accelerometer gravity vectors with 3-axis rate gyroscope integration. Successfully filtered out severe high-frequency road vibrations and mechanical frame chatter while eliminating cumulative gyroscopic drift, calculating true continuous pitch and roll dynamic angles during rides.
                                 </li>
                                 <li>
-                                    <strong>Multi-Node Peer-to-Peer Wireless Architecture (ESP-NOW):</strong> Implemented the lightweight, connectionless ESP-NOW protocol to establish a robust wireless star network between 3 distributed sender nodes and a central handlebar receiver ESP32. Achieved ultra-low latency transmission (2&ndash;10 ms) with minimal power consumption, bypassing the need for a centralized Wi-Fi router or access point <em>(Presentation Slides 42 &amp; 43)</em>.
+                                    <strong>Multi-Node Peer-to-Peer Wireless Architecture (ESP-NOW):</strong> Implemented the lightweight, connectionless ESP-NOW protocol to establish a robust wireless star network between 3 distributed sender nodes and a central handlebar receiver ESP32. Achieved ultra-low latency transmission (2&ndash;10 ms) with minimal power consumption, bypassing the need for a centralized Wi-Fi router or access point.
                                 </li>
                                 <li>
-                                    <strong>Cloud Data Ingestion &amp; Synchronization (Google Firebase):</strong> Programmed the master receiver ESP32 to establish Wi-Fi uplink and stream serialized telemetry payloads directly to Google Firebase Realtime Database. Integrated automated reconnection logic and offline data caching to maintain data integrity during outdoor signal drops <em>(Presentation Slides 44 &amp; 45)</em>.
+                                    <strong>Cloud Data Ingestion &amp; Synchronization (Google Firebase):</strong> Programmed the master receiver ESP32 to establish Wi-Fi uplink and stream serialized telemetry payloads directly to Google Firebase Realtime Database. Integrated automated reconnection logic and offline data caching to maintain data integrity during outdoor signal drops.
                                 </li>
                                 <li>
-                                    <strong>Real-Time Web Telemetry Dashboard:</strong> Developed a responsive browser-based monitoring dashboard using HTML5, CSS3, JavaScript, and Chart.js. Rendered dynamic live strip-charts and gauges for speed, distance, pitch/roll tilt, rider heart rate, and instantaneous pedal power output with sub-3-second end-to-end cloud latency <em>(Presentation Slides 46, 47, 48 &amp; 49)</em>.
+                                    <strong>Real-Time Web Telemetry Dashboard:</strong> Developed a responsive browser-based monitoring dashboard using HTML5, CSS3, JavaScript, and Chart.js. Rendered dynamic live strip-charts and gauges for speed, distance, pitch/roll tilt, rider heart rate, and instantaneous pedal power output with sub-3-second end-to-end cloud latency.
                                 </li>
                                 <li>
                                     <strong>Multi-Sensor Distributed Hardware Integration:</strong> Coordinated the end-to-end integration across all distributed sensing nodes (optical distance encoders, MAX30102 photoplethysmography heart-rate monitor, strain-gauge pedal power meters, and NEO-6M GPS modules) into a unified timestamped telemetry stream.
