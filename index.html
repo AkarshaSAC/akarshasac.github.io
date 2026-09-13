@@ -1076,21 +1076,106 @@
                 </div>
             </div>
 
-            <!-- Project 3: Diyakawa -->
-            <div class="project-card" id="diyakawa">
-                <div class="project-header-row">
-                    <h3>Project Diyakawa — Autonomous Underwater Vehicle</h3>
-                    <span class="project-badge">SAUVC 2026 China</span>
-                </div>
-                <div class="project-tools-line">SolidWorks, Firebase, C++, Microcontrollers</div>
-                <div class="project-block">
-                    Designing an AUV for the Singapore AUV Challenge in Sanya, China.
-                </div>
-                <div class="project-block">
-                    <strong>Contribution:</strong> Designed electronic architecture and motor brackets. Developed Firebase-based parameter tuning system with custom microcontroller firmware to control vehicle navigation.
-                </div>
-                <div class="project-outcome-box">
-                    <strong>Outcome:</strong> Successfully passed qualifying round and secured on-site competition entry.
+            <!-- Project 3: Diyakawa (Flagship AUV with Media Gallery) -->
+            <div class="project-card project-card-featured" id="diyakawa">
+                <div class="project-featured-grid">
+                    <!-- Left Column: Interactive Media Showcase -->
+                    <div class="project-gallery-wrap">
+                        <div class="gallery-main-container" onclick="openLightbox(document.getElementById('diyakawa-main-img'))">
+                            <img id="diyakawa-main-img" src="assets/diyakawa/diyakawa-auv-poolside.jpg" alt="Project Diyakawa Autonomous Underwater Vehicle" class="gallery-main-img">
+                            <div class="gallery-badge-overlay">🔍 Click to enlarge</div>
+                        </div>
+                        <div class="gallery-caption" id="diyakawa-caption">
+                            AUV Physical Vehicle Integration: CNC aluminum spaceframe chassis, multi-DOF propulsion array, IP68 waterproof boxes, and emergency kill-switch.
+                        </div>
+                        <div class="gallery-thumbs-row">
+                            <div class="thumb-item active" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-auv-poolside.jpg', 'AUV Physical Vehicle Integration: CNC aluminum spaceframe chassis, multi-DOF propulsion array, IP68 waterproof boxes, and emergency kill-switch.')">
+                                <img src="assets/diyakawa/diyakawa-auv-poolside.jpg" alt="AUV Poolside">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-thruster-array-bench.jpg', 'Subsea Thruster Array &amp; Distribution Hub: 8-thruster motor setup with marine waterproof glands connected to central junction enclosure.')">
+                                <img src="assets/diyakawa/diyakawa-thruster-array-bench.jpg" alt="Thruster Array">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-cad-shroud-design.jpg', 'SolidWorks CAD Shroud Design: Hydrodynamically contoured thruster duct nozzle with internal mounting tabs and flow guide ribs.')">
+                                <img src="assets/diyakawa/diyakawa-cad-shroud-design.jpg" alt="CAD Shroud Design">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-3dprinted-components.jpg', 'Additive Manufacturing &amp; Subsystems: 3D-printed thruster shrouds, clamp rings, and custom waterproof sensor housing units.')">
+                                <img src="assets/diyakawa/diyakawa-3dprinted-components.jpg" alt="3D Printed Parts">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-power-distribution-harness.jpg', 'Power Electronics Harness: Solid-State Relay (SSR-40 DD), high-efficiency DC-DC step-down buck regulators, and fused wiring.')">
+                                <img src="assets/diyakawa/diyakawa-power-distribution-harness.jpg" alt="Power Distribution">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-custom-battery-pack.jpg', 'Custom Spot-Welded Battery Pack: High-discharge 18650 Li-ion cells, integrated BMS protection board, and master power toggle.')">
+                                <img src="assets/diyakawa/diyakawa-custom-battery-pack.jpg" alt="Battery Pack">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('diyakawa', 'assets/diyakawa/diyakawa-aluminum-chassis-frame.jpg', 'Spaceframe Chassis Assembly: Precision-machined aluminum mounting plates, stainless hardware, and vertical thruster ducts.')">
+                                <img src="assets/diyakawa/diyakawa-aluminum-chassis-frame.jpg" alt="Chassis Frame">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Engineering Details -->
+                    <div class="project-details-wrap">
+                        <div class="project-header-row">
+                            <div>
+                                <span class="project-category-tag">🌊 Autonomous Marine Robotics (SAUVC 2026 China)</span>
+                                <h3 style="font-size: 1.45rem;">Project Diyakawa — Autonomous Underwater Vehicle (AUV)</h3>
+                            </div>
+                            <span class="project-badge">SAUVC 2026 Qualified</span>
+                        </div>
+                        
+                        <div class="project-tools-line">
+                            SolidWorks • C++ / Arduino • Firebase Realtime DB • Closed-Loop PID • Depth Sensors • 18650 Li-Ion Pack • IP68 Waterproofing • Brushless ESCs
+                        </div>
+
+                        <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
+                            Designed and developed an Autonomous Underwater Vehicle (AUV) for the <strong>Singapore Autonomous Underwater Vehicle Challenge (SAUVC) 2026</strong> in Sanya, China. Spearheaded the vehicle electronic architecture, marine power distribution, SolidWorks mechanical thruster brackets, and wireless cloud-connected telemetry for closed-loop control tuning.
+                        </div>
+
+                        <!-- Technical Highlights Grid -->
+                        <div class="tech-spec-grid">
+                            <div class="spec-pill">
+                                <span class="spec-label">Subsystem Role</span>
+                                <span class="spec-val">Electronics &amp; Controls Lead</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Telemetry Link</span>
+                                <span class="spec-val">Firebase Realtime DB</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Control Loop</span>
+                                <span class="spec-val">Closed-Loop PID (Depth/Heading)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Thruster Array</span>
+                                <span class="spec-val">Multi-DOF Brushless (8 ESCs)</span>
+                            </div>
+                        </div>
+
+                        <!-- Deep Dive Engineering Contributions -->
+                        <div class="project-deep-dive">
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                💡 Key Engineering Contributions:
+                            </h4>
+                            <ul class="deep-dive-list">
+                                <li>
+                                    <strong>Electronic Architecture &amp; Marine Power Network:</strong> Architected the vehicle electrical system, featuring high-current DC-DC buck regulators, a 40A Solid-State Relay (SSR-40 DD) master circuit, fused distribution blocks, and a custom spot-welded 18650 Li-ion battery pack with integrated Battery Management System (BMS) for sustained underwater runtimes.
+                                </li>
+                                <li>
+                                    <strong>Firebase Over-The-Air PID Telemetry &amp; Tuning:</strong> Engineered an embedded IoT control pipeline running custom C++ firmware on the flight microcontroller integrated with Google Firebase Realtime Database. Enabled wireless poolside transmission and live over-the-air tuning of depth and yaw PID gains (Kp, Ki, Kd) without opening sealed waterproof enclosures.
+                                </li>
+                                <li>
+                                    <strong>Thruster Bracket CAD &amp; Additive Hydrodynamics:</strong> Modeled hydrodynamic thruster mounting brackets, flow-directing nozzle shrouds, and protective covers in SolidWorks. Rapid-prototyped parts via FDM 3D printing to minimize hydrodynamic drag, isolate motor vibration, and protect impellers from debris during subsea operations.
+                                </li>
+                                <li>
+                                    <strong>Closed-Loop Depth Control &amp; Waterproof Integrity:</strong> Implemented real-time depth hold algorithms driven by hydrostatic pressure sensor feedback. Engineered IP68 ingress protection utilizing compression cable glands, O-ring sealed enclosures, and butyl potting to withstand hydrostatic pressures in competition dive pools.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-outcome-box" style="margin-top: 18px;">
+                            <strong>Competition Outcome:</strong> Successfully passed the rigorous international qualifying round and design review to secure official on-site competition entry representing the University of Moratuwa at <strong>SAUVC 2026</strong> in Sanya, China.
+                        </div>
+                    </div>
                 </div>
             </div>
 
