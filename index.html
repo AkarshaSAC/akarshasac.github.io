@@ -1379,21 +1379,115 @@
                 </div>
             </div>
 
-            <!-- Project 6: Bicycle Telemetry -->
-            <div class="project-card" id="bicycle">
-                <div class="project-header-row">
-                    <h3>Bicycle Telemetry & Cloud Logging System</h3>
-                    <span class="project-badge">IoT & Sensors</span>
-                </div>
-                <div class="project-tools-line">Microcontrollers, ESP-NOW, Firebase, Web, Sensors</div>
-                <div class="project-block">
-                    Comprehensive telemetry measuring speed, distance, acceleration, orientation, and power input.
-                </div>
-                <div class="project-block">
-                    <strong>Contribution:</strong> Managed IMU sensors, ESP-NOW protocol across 3 microcontrollers, and Firebase real-time data logging with live web dashboard.
-                </div>
-                <div class="project-outcome-box">
-                    <strong>Outcome:</strong> Integrated three-tier system with live cloud syncing and local display module.
+            <!-- Project 6: Bicycle Telemetry (Featured IoT System with Presentation Gallery) -->
+            <div class="project-card project-card-featured" id="bicycle">
+                <div class="project-featured-grid">
+                    <!-- Left Column: Interactive Media Showcase -->
+                    <div class="project-gallery-wrap">
+                        <div class="gallery-main-container" onclick="openLightbox(document.getElementById('bicycle-main-img'))">
+                            <img id="bicycle-main-img" src="assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg" alt="Bicycle Telemetry Live Web Dashboard" class="gallery-main-img">
+                            <div class="gallery-badge-overlay">🔍 Click to enlarge</div>
+                        </div>
+                        <div class="gallery-caption" id="bicycle-caption">
+                            Live Telemetry Web Dashboard: Real-time telemetry monitoring speed, distance, pitch/roll orientation, heart rate, and power with &lt;3s sync latency (Presentation Slide 47).
+                        </div>
+                        <div class="gallery-thumbs-row">
+                            <div class="thumb-item active" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg', 'Presentation Slide 47: Live Telemetry Web Dashboard (Real-time speed, distance, pitch, roll, heart rate, and power monitoring with &lt;3s latency).')">
+                                <img src="assets/bicycle/bicycle-slide-47-web-dashboard-live.jpg" alt="Slide 47: Live Dashboard">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-19-kalman-filter-fusion.jpg', 'Presentation Slide 19: Sensor Fusion using Kalman Filter (Fusing MPU 9250 accelerometer and gyroscope to eliminate road vibration noise and angular drift).')">
+                                <img src="assets/bicycle/bicycle-slide-19-kalman-filter-fusion.jpg" alt="Slide 19: Kalman Fusion">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-20-kalman-pitch-roll-plots.jpg', 'Presentation Slide 20: Real-Time Pitch &amp; Roll Angle Waveforms after Kalman Filter Processing.')">
+                                <img src="assets/bicycle/bicycle-slide-20-kalman-pitch-roll-plots.jpg" alt="Slide 20: Pitch/Roll Waveforms">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-21-kalman-roll-vs-actual.jpg', 'Presentation Slide 21: Kalman Filtered Roll Angle vs Real Angle Validation (Noise rejection &amp; zero drift).')">
+                                <img src="assets/bicycle/bicycle-slide-21-kalman-roll-vs-actual.jpg" alt="Slide 21: Kalman vs Actual">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-43-espnow-wireless.jpg', 'Presentation Slide 43: Multi-Node Wireless Telemetry via ESP-NOW (3 Senders &rarr; 1 Receiver star network, 2&ndash;10 ms ultra-low latency, routerless).')">
+                                <img src="assets/bicycle/bicycle-slide-43-espnow-wireless.jpg" alt="Slide 43: ESP-NOW Wireless">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-45-firebase-cloud-logging.jpg', 'Presentation Slide 45: Google Firebase Realtime Database Cloud Sync with Timestamped Ride History &amp; Auto-Reconnect.')">
+                                <img src="assets/bicycle/bicycle-slide-45-firebase-cloud-logging.jpg" alt="Slide 45: Firebase Cloud">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-48-graphs-and-tables.jpg', 'Presentation Slide 48: Interactive Telemetry Graphs (Chart.js) and Live Tabular Data Tables.')">
+                                <img src="assets/bicycle/bicycle-slide-48-graphs-and-tables.jpg" alt="Slide 48: Graphs &amp; Tables">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('bicycle', 'assets/bicycle/bicycle-slide-1-title.jpg', 'Presentation Slide 1: University Instrumentation System Design Project Title Slide.')">
+                                <img src="assets/bicycle/bicycle-slide-1-title.jpg" alt="Slide 1: Project Title">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Engineering Details -->
+                    <div class="project-details-wrap">
+                        <div class="project-header-row">
+                            <div>
+                                <span class="project-category-tag">🚴 IoT Telemetry &amp; Embedded Sensing</span>
+                                <h3 style="font-size: 1.45rem;">Bicycle Instrumentation &amp; Cloud Telemetry System</h3>
+                            </div>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                                <span class="project-role-tag" style="background: rgba(59, 130, 246, 0.18); border: 1px solid rgba(59, 130, 246, 0.45); color: #93c5fd; padding: 4px 10px; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.3px;">Lead: IMU Fusion, ESP-NOW &amp; Cloud Dashboard</span>
+                                <span class="project-badge">Functional Hardware &amp; IoT</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-tools-line">
+                            ESP-NOW Protocol • ESP32 / Arduino • MPU 9250 IMU • Kalman Filter • Google Firebase • JavaScript / Chart.js • HTML5/CSS3 • Sensor Fusion
+                        </div>
+
+                        <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
+                            Engineered a comprehensive, distributed bicycle telemetry and live cloud-logging ecosystem. Led the orientation and acceleration measurement pipeline utilizing Kalman filter sensor fusion on an MPU 9250 IMU, implemented a high-speed multi-node ESP-NOW wireless network across 3 microcontrollers, and developed the Google Firebase cloud ingestion backend and real-time browser dashboard.
+                        </div>
+
+                        <!-- Technical Highlights Grid -->
+                        <div class="tech-spec-grid">
+                            <div class="spec-pill">
+                                <span class="spec-label">Network Topology</span>
+                                <span class="spec-val">ESP-NOW (3 Senders &rarr; 1 Receiver)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Wireless Latency</span>
+                                <span class="spec-val">2 &ndash; 10 ms (No Router Required)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Orientation Fusion</span>
+                                <span class="spec-val">Kalman Filter (MPU 9250 IMU)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Cloud &amp; UI Stack</span>
+                                <span class="spec-val">Firebase Realtime DB + Chart.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Highlighted Subsystem Contributions (Backed by Presentation Slides) -->
+                        <div class="project-deep-dive">
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                ⚙️ Personal Engineering Ownership &amp; Subsystem Contributions:
+                            </h4>
+                            <ul class="deep-dive-list">
+                                <li>
+                                    <strong>Kalman Filter Sensor Fusion (Orientation &amp; Acceleration):</strong> Modeled and implemented a real-time Kalman filter on the MPU 9250 IMU to fuse 3-axis accelerometer gravity vectors with 3-axis rate gyroscope integration. Successfully filtered out severe high-frequency road vibrations and mechanical frame chatter while eliminating cumulative gyroscopic drift, calculating true continuous pitch and roll dynamic angles during rides <em>(Presentation Slides 19, 20 &amp; 21)</em>.
+                                </li>
+                                <li>
+                                    <strong>Multi-Node Peer-to-Peer Wireless Architecture (ESP-NOW):</strong> Implemented the lightweight, connectionless ESP-NOW protocol to establish a robust wireless star network between 3 distributed sender nodes and a central handlebar receiver ESP32. Achieved ultra-low latency transmission (2&ndash;10 ms) with minimal power consumption, bypassing the need for a centralized Wi-Fi router or access point <em>(Presentation Slides 42 &amp; 43)</em>.
+                                </li>
+                                <li>
+                                    <strong>Cloud Data Ingestion &amp; Synchronization (Google Firebase):</strong> Programmed the master receiver ESP32 to establish Wi-Fi uplink and stream serialized telemetry payloads directly to Google Firebase Realtime Database. Integrated automated reconnection logic and offline data caching to maintain data integrity during outdoor signal drops <em>(Presentation Slides 44 &amp; 45)</em>.
+                                </li>
+                                <li>
+                                    <strong>Real-Time Web Telemetry Dashboard:</strong> Developed a responsive browser-based monitoring dashboard using HTML5, CSS3, JavaScript, and Chart.js. Rendered dynamic live strip-charts and gauges for speed, distance, pitch/roll tilt, rider heart rate, and instantaneous pedal power output with sub-3-second end-to-end cloud latency <em>(Presentation Slides 46, 47, 48 &amp; 49)</em>.
+                                </li>
+                                <li>
+                                    <strong>Multi-Sensor Distributed Hardware Integration:</strong> Coordinated the end-to-end integration across all distributed sensing nodes (optical distance encoders, MAX30102 photoplethysmography heart-rate monitor, strain-gauge pedal power meters, and NEO-6M GPS modules) into a unified timestamped telemetry stream.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-outcome-box" style="margin-top: 18px;">
+                            <strong>Engineering Outcome &amp; University Presentation:</strong> Delivered a fully functional three-tier IoT telemetry system validated during live road-cycling field trials. Successfully logged multi-channel sensor feeds to the cloud with real-time browser telemetry, completing the Instrumentation System Design Project at the University of Moratuwa.
+                        </div>
+                    </div>
                 </div>
             </div>
 
