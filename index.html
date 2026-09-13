@@ -1286,6 +1286,15 @@
                             <div class="thumb-item active" onclick="openLightbox('assets/scara/scara-video-poster.jpg', 'Electromagnetic Pick-and-Place: Arm positioning directly over target blue circular shape on indexed sorting platter.')">
                                 <img src="assets/scara/scara-video-poster.jpg" alt="Pick Action">
                             </div>
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-electromechanical-kinematics.jpg', 'Presentation Slide 4: Electro-Mechanical System &amp; Analytical Inverse Kinematics (Chirantha Akarsha — Subsystem Ownership).')">
+                                <img src="assets/scara/scara-slide-electromechanical-kinematics.jpg" alt="Slide 4: Electro-Mechanical System">
+                            </div>
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-components.jpg', 'Presentation Slide 3: Mechatronics Hardware Architecture &amp; 4-Axis Actuation Stack (Arduino, CNC Shield, A4988, NEMA 17, Electromagnet).')">
+                                <img src="assets/scara/scara-slide-components.jpg" alt="Slide 3: System Components">
+                            </div>
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-slide-authorship.jpg', 'Presentation Slide 1: University Presentation Authorship — 230028A - Akarsha S. A. C.')">
+                                <img src="assets/scara/scara-slide-authorship.jpg" alt="Slide 1: Presentation Authorship">
+                            </div>
                             <div class="thumb-item" onclick="openLightbox('assets/scara/scara-hardware-arm-platter.jpg', 'SCARA 3-DOF Arm Assembly: Vertical lead screw prismatic Z-axis, dual revolute joints, and circular sorting workspace.')">
                                 <img src="assets/scara/scara-hardware-arm-platter.jpg" alt="Hardware Assembly">
                             </div>
@@ -1305,60 +1314,66 @@
                                 <span class="project-category-tag">🤖 Industrial Robotics &amp; Computer Vision</span>
                                 <h3 style="font-size: 1.45rem;">Vision-Guided SCARA Pick-and-Place Robot</h3>
                             </div>
-                            <span class="project-badge">Functional Hardware</span>
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                                <span class="project-role-tag" style="background: rgba(59, 130, 246, 0.18); border: 1px solid rgba(59, 130, 246, 0.45); color: #93c5fd; padding: 4px 10px; border-radius: 9999px; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.3px;">Lead: Electro-Mechanical &amp; Kinematics</span>
+                                <span class="project-badge">Functional Hardware</span>
+                            </div>
                         </div>
                         
                         <div class="project-tools-line">
-                            Python • Ultralytics YOLO • OpenCV • Raspberry Pi • Arduino • Inverse Kinematics • Stepper Motors • Full-Stack Web GUI
+                            Analytical Inverse Kinematics • Arduino Uno (C++) • Raspberry Pi 4 • Stepper Control (A4988/CNC Shield) • Electromagnet Actuation • Serial UART Protocol • SolidWorks CAD • YOLOv11 &amp; Web Integration
                         </div>
 
                         <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
-                            Engineered a 3-DOF vision-guided Selective Compliance Articulated Robot Arm (SCARA) to automate shape- and color-based object identification, sorting, and manipulation. Combines on-edge deep learning inference with closed-loop embedded actuation and a web-based dispatch interface.
+                            Engineered the physical 3-DOF SCARA manipulator, 4-axis stepper powertrain, embedded Arduino motion firmware, and electromagnetic end-effector for an autonomous vision-guided sorting cell. Seamlessly bridged high-level edge AI coordinates from a Raspberry Pi with low-level closed-loop geometric kinematic actuation.
                         </div>
 
                         <!-- Technical Highlights Grid -->
                         <div class="tech-spec-grid">
                             <div class="spec-pill">
-                                <span class="spec-label">Configuration</span>
+                                <span class="spec-label">Robot Kinematics</span>
                                 <span class="spec-val">RR-P (2 Revolute + 1 Prismatic)</span>
                             </div>
                             <div class="spec-pill">
-                                <span class="spec-label">Vision Model</span>
-                                <span class="spec-val">Ultralytics YOLO + OpenCV</span>
+                                <span class="spec-label">Embedded Controller</span>
+                                <span class="spec-val">Arduino Uno (C++ Kinematics Engine)</span>
                             </div>
                             <div class="spec-pill">
-                                <span class="spec-label">Compute Core</span>
-                                <span class="spec-val">Raspberry Pi (Edge) + Arduino</span>
+                                <span class="spec-label">Actuation Stack</span>
+                                <span class="spec-val">4× NEMA 17 + A4988 + CNC Shield</span>
                             </div>
                             <div class="spec-pill">
-                                <span class="spec-label">End-Effector</span>
-                                <span class="spec-val">12V Solenoid Electromagnet</span>
+                                <span class="spec-label">End-Effector &amp; Platter</span>
+                                <span class="spec-val">12V Electromagnet + 9-Slot Turntable</span>
                             </div>
                         </div>
 
-                        <!-- Deep Dive Engineering Contributions -->
+                        <!-- Highlighted Subsystem Contributions (Backed by Presentation Slides) -->
                         <div class="project-deep-dive">
-                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
-                                💡 Key Engineering Contributions:
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                ⚙️ Personal Engineering Ownership &amp; Subsystem Contributions:
                             </h4>
                             <ul class="deep-dive-list">
                                 <li>
-                                    <strong>Computer Vision &amp; Deep Learning Detection:</strong> Deployed an Ultralytics YOLO and OpenCV pipeline on a Raspberry Pi single-board computer. Calibrated an overhead vision camera to classify geometric shapes (circles, hexagons, squares) and color signatures (red, green, blue) across an indexed circular sorting platter under varying ambient illumination.
+                                    <strong>Analytical Inverse Kinematics (Arduino C++):</strong> Derived closed-form planar geometric inverse kinematics equations to map Cartesian coordinates $(x, y)$ into dual revolute joint angles (&theta;1, &theta;2) and vertical lead-screw step counts. Programmed the kinematics calculation engine directly on the Arduino Uno microcontroller for real-time trajectory execution <em>(Presentation Slide 4)</em>.
                                 </li>
                                 <li>
-                                    <strong>Analytical Inverse Kinematics &amp; Motion Control:</strong> Formulated closed-form 2D planar inverse kinematics and vertical Z-axis prismatic displacement equations. Derived exact joint motor angles (&theta;1, &theta;2) and lead-screw steps, transmitting synchronized motion commands over a high-speed UART serial bridge from Python to an Arduino low-level motor controller.
+                                    <strong>Microcontroller-to-Edge Serial Communication Bridge:</strong> Architected the UART serial communication protocol linking the Arduino Uno to the vision-processing Raspberry Pi 4. Structured the packet parsing to ingest target object coordinates, geometric shape classes, and color labels in real time <em>(Presentation Slide 4)</em>.
                                 </li>
                                 <li>
-                                    <strong>Mechanical Design &amp; Rapid Prototyping:</strong> Designed a rigid 3D-printed chassis utilizing dual NEMA 17 stepper motors, timing-belt reduction drives, and linear guide rods with a precision lead-screw drive for vertical Z-travel. Integrated a fast-switching 12V electromagnetic end-effector capable of reliable rapid picking and placing.
+                                    <strong>4-Axis Stepper &amp; Turntable Drive Train:</strong> Configured an Arduino CNC Shield with 4 A4988 drivers to synchronously drive 4 NEMA 17 stepper motors: two revolute arm axes, a precision vertical lead-screw Z-axis running on linear guide bearings, and an indexed 9-slot turntable platter mounted on 3mm steel ball bearings to rotate targeted items into reachable workspace <em>(Presentation Slides 3 &amp; 4)</em>.
                                 </li>
                                 <li>
-                                    <strong>Full-Stack Remote Dispatch Web GUI:</strong> Developed a responsive browser-based operator dashboard allowing users to select target objects by color and shape. The interface dispatches JSON command payloads to the Raspberry Pi backend, triggering automated sorting routines and real-time execution feedback.
+                                    <strong>Electromagnetic End-Effector Pick-and-Place Cycle:</strong> Engineered and integrated a switched 12V electromagnetic end-effector circuit. Formulated the state-machine sequence to lower the arm along the Z-axis, energize the solenoid to grip ferrous geometric objects, elevate and traverse to sorting drop-off bins, de-energize to release, and execute homing retraction <em>(Presentation Slide 4)</em>.
+                                </li>
+                                <li>
+                                    <strong>Full Mechatronic System Integration:</strong> Partnered across the 5-member engineering team to integrate the physical actuation subsystem with the overhead YOLOv11 deep learning model (trained on ~100 multi-angle images, Slide 5) and the PHP/SQLite web dispatch portal featuring OTP authentication (Slide 6), delivering an autonomous end-to-end sorting pipeline.
                                 </li>
                             </ul>
                         </div>
 
                         <div class="project-outcome-box" style="margin-top: 18px;">
-                            <strong>Engineering Outcome:</strong> Successfully built and demonstrated a fully autonomous pick-and-place cell operating with zero human intervention, seamlessly bridging web UI commands, AI object detection, and hardware kinematic execution.
+                            <strong>Engineering Outcome &amp; University Presentation:</strong> Delivered a fully operational mechatronic sorting cell verified across multiple test cycles with zero manual intervention. Co-presented findings for University of Moratuwa Mechatronic Systems Engineering (Presentation Authorship: Akarsha S. A. C. - 230028A, Slide 1).
                         </div>
                     </div>
                 </div>
