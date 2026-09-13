@@ -1179,21 +1179,103 @@
                 </div>
             </div>
 
-            <!-- Project 4: Tree Climbing Robot -->
-            <div class="project-card" id="tree-climber">
-                <div class="project-header-row">
-                    <h3>Tree-Climbing Robot — Mechatronics Systems Design</h3>
-                    <span class="project-badge">Capstone (Ongoing)</span>
-                </div>
-                <div class="project-tools-line">CAD, Kinematic Simulation (SolidWorks/ADAMS)</div>
-                <div class="project-block">
-                    Developing a robot capable of reliably ascending tapered and inclined coconut palm trunks without damaging the tree.
-                </div>
-                <div class="project-block">
-                    <strong>Contribution:</strong> Designing and simulating an autonomous climber utilizing active taper adaptation, tensioned band grippers, and Time-of-Flight sensors for inherently stable movement.
-                </div>
-                <div class="project-outcome-box">
-                    <strong>Outcome:</strong> Successfully advancing through design and simulation phases.
+            <!-- Project 4: Tree Climbing Robot (Featured Capstone with Media Gallery) -->
+            <div class="project-card project-card-featured" id="tree-climber">
+                <div class="project-featured-grid">
+                    <!-- Left Column: Interactive Media Showcase -->
+                    <div class="project-gallery-wrap">
+                        <div class="gallery-main-container" onclick="openLightbox(document.getElementById('treeclimber-main-img'))">
+                            <img id="treeclimber-main-img" src="assets/tree-climber/tree-climber-taper-climb-cad.png" alt="Tree Climbing Robot SolidWorks CAD Assembly" class="gallery-main-img">
+                            <div class="gallery-badge-overlay">🔍 Click to enlarge</div>
+                        </div>
+                        <div class="gallery-caption" id="treeclimber-caption">
+                            SolidWorks 3D CAD Assembly: 5-DOF alternating-grip climbing robot actively clamped around a tapered coconut palm trunk.
+                        </div>
+                        <div class="gallery-thumbs-row">
+                            <div class="thumb-item active" onclick="swapGalleryImage('treeclimber', 'assets/tree-climber/tree-climber-taper-climb-cad.png', 'SolidWorks 3D CAD Assembly: 5-DOF alternating-grip climbing robot actively clamped around a tapered coconut palm trunk.')">
+                                <img src="assets/tree-climber/tree-climber-taper-climb-cad.png" alt="Taper Climb CAD">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('treeclimber', 'assets/tree-climber/tree-climber-inclination-adaptation.png', 'Inclination Angle Adaptation: Articulated linkages adjusting pitch orientation to maintain gripper parallel to inclined trunk surfaces.')">
+                                <img src="assets/tree-climber/tree-climber-inclination-adaptation.png" alt="Inclination Adaptation">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('treeclimber', 'assets/tree-climber/tree-climber-solidworks-workspace.png', 'SolidWorks 2024 Workspace: Feature tree, assembly mates, gear-driven gripper jaws, and active proximity sensor ray casting.')">
+                                <img src="assets/tree-climber/tree-climber-solidworks-workspace.png" alt="SolidWorks Workspace">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('treeclimber', 'assets/tree-climber/tree-climber-sensor-gripper-detail.png', 'Sensor-Guided Gripper Detail: Integrated dual ToF/proximity sensor arrays actively tracking trunk curvature and diameter in real time.')">
+                                <img src="assets/tree-climber/tree-climber-sensor-gripper-detail.png" alt="Sensor Gripper Detail">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('treeclimber', 'assets/tree-climber/tree-climber-kinematics-calculations.png', 'Kinematic Synthesis &amp; FBD: Analytical link-length derivations, equilibrium equations, and symmetrical 5-DOF linkage optimization.')">
+                                <img src="assets/tree-climber/tree-climber-kinematics-calculations.png" alt="Kinematics Calculations">
+                            </div>
+                            <div class="thumb-item" onclick="swapGalleryImage('treeclimber', 'assets/tree-climber/tree-climber-concept-render.png', 'Bio-Mechanical Concept Vision: High-tech dual-gripper climbing robot ascending a tropical coconut palm.')">
+                                <img src="assets/tree-climber/tree-climber-concept-render.png" alt="Concept Vision">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Engineering Details -->
+                    <div class="project-details-wrap">
+                        <div class="project-header-row">
+                            <div>
+                                <span class="project-category-tag">🌴 Agricultural &amp; Bio-Mechanical Robotics</span>
+                                <h3 style="font-size: 1.45rem;">Design and Development of an Autonomous Tree-Climbing Robot</h3>
+                            </div>
+                            <span class="project-badge">Capstone (Ongoing)</span>
+                        </div>
+                        
+                        <div class="project-tools-line">
+                            SolidWorks 2024 • Kinematic Synthesis • Multi-Body Dynamics • Sensor-Triggered Gait FSM • ToF Distance Sensing • Closed-Loop Pitch Control
+                        </div>
+
+                        <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
+                            Undergraduate individual Capstone project (University of Moratuwa) developing an autonomous alternating-grip climbing robot designed to ascend tapered, inclined coconut palms reliably and non-invasively. Synthesized a novel 5-DOF mechanical architecture that adapts dynamically to changing trunk diameters and inclinations while guaranteeing fall-safe stability.
+                        </div>
+
+                        <!-- Technical Highlights Grid -->
+                        <div class="tech-spec-grid">
+                            <div class="spec-pill">
+                                <span class="spec-label">Kinematic Type</span>
+                                <span class="spec-val">5-DOF Alternating Gait</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Taper Adaptation</span>
+                                <span class="spec-val">Ø 80 mm – 150 mm</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Step / Stride</span>
+                                <span class="spec-val">150 mm / Cycle (Smax=250mm)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Safety Margin</span>
+                                <span class="spec-val">Fail-Safe Clamping Interlock</span>
+                            </div>
+                        </div>
+
+                        <!-- Deep Dive Engineering Contributions -->
+                        <div class="project-deep-dive">
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                💡 Key Engineering Contributions:
+                            </h4>
+                            <ul class="deep-dive-list">
+                                <li>
+                                    <strong>Analytical Kinematic Synthesis &amp; CG Alignment:</strong> Formulated mathematical free-body diagrams and kinematic equations to solve for optimal link lengths ($L_{min} = 131.2\text{ mm}$, $L_{max} = 158.1\text{ mm}$), establishing symmetrical links ($L_1 = L_2 = 150\text{ mm}$). Designed the resultant grip force vector to intersect the robot's center of gravity (CG) and trunk axis throughout the 150 mm stride cycle, eliminating overturning moments without requiring destructive bark-puncturing spikes.
+                                </li>
+                                <li>
+                                    <strong>Active Diameter Sensing &amp; Articulated Grippers:</strong> Modeled multi-tier gear-driven curved clamp grippers in SolidWorks 2024 with integrated proximity/ToF distance sensors. Engineered a pre-grasp scanning routine that contracts the gripper incrementally to detect bark boundaries, calculating exact local trunk diameter (80 mm – 150 mm) before applying calibrated clamping torque.
+                                </li>
+                                <li>
+                                    <strong>Closed-Loop Trunk Inclination Adaptation:</strong> Developed a dynamic tilt-correction algorithm utilizing upper and lower distance sensors on each detached gripper. When ascending inclined trunks, the system measures the differential distance offset and commands an articulated pitch joint to rotate the gripper plane parallel to the trunk surface prior to locking.
+                                </li>
+                                <li>
+                                    <strong>Fail-Safe 6-Phase Gait State Machine:</strong> Designed a sensor-triggered Finite State Machine (FSM) controlling sequential climbing: Anchored $\rightarrow$ Upper Release $\rightarrow$ Body Linear Extension $\rightarrow$ Diameter-Adaptive Upper Reclamp $\rightarrow$ Lower Release $\rightarrow$ Body Retraction $\rightarrow$ Lower Reclamp. Strictly enforces that at least one gripper unit maintains verified holding force before the other releases.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-outcome-box" style="margin-top: 18px;">
+                            <strong>Capstone Engineering Progress:</strong> Completed mathematical kinematic modeling, free-body static equilibrium derivations, and parametric SolidWorks 3D CAD assemblies; currently conducting multi-body dynamic simulation and stress analysis to optimize actuator torque profiles ahead of physical fabrication.
+                        </div>
+                    </div>
                 </div>
             </div>
 

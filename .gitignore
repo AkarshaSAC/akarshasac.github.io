@@ -1,9 +1,13 @@
-﻿*.docx
+*.docx
 *.doc
 *.xlsx
 *.xls
+*.pptx
+*.ppt
 *confidential*
 *Confidential*
 .DS_Store
 Thumbs.db
 extracted/
+Weekly/
+
