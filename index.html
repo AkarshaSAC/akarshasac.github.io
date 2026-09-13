@@ -1268,21 +1268,99 @@
                 </div>
             </div>
 
-            <!-- Project 5: SCARA Robot -->
-            <div class="project-card" id="scara">
-                <div class="project-header-row">
-                    <h3>Vision-Guided SCARA Pick-and-Place Robot</h3>
-                    <span class="project-badge">Robotics</span>
-                </div>
-                <div class="project-tools-line">Arduino, Raspberry Pi, Image Processing, Web Interface</div>
-                <div class="project-block">
-                    Automating identification and sorting of objects based on shape and color via a user interface.
-                </div>
-                <div class="project-block">
-                    <strong>Contribution:</strong> Engineered mechanical and electronic systems. Programmed Arduino controller linked to Raspberry Pi for computer vision, calculated kinematics, and integrated an electromagnet end-effector.
-                </div>
-                <div class="project-outcome-box">
-                    <strong>Outcome:</strong> Delivered functional prototype controlled via custom web interface.
+            <!-- Project 5: SCARA Robot (Featured Flagship with Embedded Video Demo) -->
+            <div class="project-card project-card-featured" id="scara">
+                <div class="project-featured-grid">
+                    <!-- Left Column: Video & Media Showcase -->
+                    <div class="project-gallery-wrap">
+                        <div class="gallery-video-container" style="border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); background: #000; position: relative;">
+                            <video controls playsinline preload="metadata" poster="assets/scara/scara-video-poster.jpg" style="width: 100%; display: block; max-height: 440px; object-fit: contain; margin: 0 auto; background: #0b0f19;">
+                                <source src="assets/scara/scara-pick-and-place-demo.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="gallery-caption" id="scara-caption">
+                            Autonomous Sorting Demo (72s): Computer vision object detection, inverse kinematics, and electromagnetic pick-and-place.
+                        </div>
+                        <div class="gallery-thumbs-row">
+                            <div class="thumb-item active" onclick="openLightbox('assets/scara/scara-video-poster.jpg', 'Electromagnetic Pick-and-Place: Arm positioning directly over target blue circular shape on indexed sorting platter.')">
+                                <img src="assets/scara/scara-video-poster.jpg" alt="Pick Action">
+                            </div>
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-hardware-arm-platter.jpg', 'SCARA 3-DOF Arm Assembly: Vertical lead screw prismatic Z-axis, dual revolute joints, and circular sorting workspace.')">
+                                <img src="assets/scara/scara-hardware-arm-platter.jpg" alt="Hardware Assembly">
+                            </div>
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-yolo-terminal-pipeline.jpg', 'Ultralytics YOLO Vision Pipeline: Real-time shape/color recognition on Raspberry Pi with UART serial command stream to Arduino.')">
+                                <img src="assets/scara/scara-yolo-terminal-pipeline.jpg" alt="YOLO Vision Pipeline">
+                            </div>
+                            <div class="thumb-item" onclick="openLightbox('assets/scara/scara-web-control-interface.jpg', 'Custom Web Control Dashboard: Interactive GUI with shape and color selectors for remote sorting control.')">
+                                <img src="assets/scara/scara-web-control-interface.jpg" alt="Web Control GUI">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Engineering Details -->
+                    <div class="project-details-wrap">
+                        <div class="project-header-row">
+                            <div>
+                                <span class="project-category-tag">🤖 Industrial Robotics &amp; Computer Vision</span>
+                                <h3 style="font-size: 1.45rem;">Vision-Guided SCARA Pick-and-Place Robot</h3>
+                            </div>
+                            <span class="project-badge">Functional Hardware</span>
+                        </div>
+                        
+                        <div class="project-tools-line">
+                            Python • Ultralytics YOLO • OpenCV • Raspberry Pi • Arduino • Inverse Kinematics • Stepper Motors • Full-Stack Web GUI
+                        </div>
+
+                        <div class="project-block" style="font-size: 0.98rem; line-height: 1.6; margin-bottom: 14px;">
+                            Engineered a 3-DOF vision-guided Selective Compliance Articulated Robot Arm (SCARA) to automate shape- and color-based object identification, sorting, and manipulation. Combines on-edge deep learning inference with closed-loop embedded actuation and a web-based dispatch interface.
+                        </div>
+
+                        <!-- Technical Highlights Grid -->
+                        <div class="tech-spec-grid">
+                            <div class="spec-pill">
+                                <span class="spec-label">Configuration</span>
+                                <span class="spec-val">RR-P (2 Revolute + 1 Prismatic)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Vision Model</span>
+                                <span class="spec-val">Ultralytics YOLO + OpenCV</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">Compute Core</span>
+                                <span class="spec-val">Raspberry Pi (Edge) + Arduino</span>
+                            </div>
+                            <div class="spec-pill">
+                                <span class="spec-label">End-Effector</span>
+                                <span class="spec-val">12V Solenoid Electromagnet</span>
+                            </div>
+                        </div>
+
+                        <!-- Deep Dive Engineering Contributions -->
+                        <div class="project-deep-dive">
+                            <h4 style="color: #93c5fd; font-size: 0.88rem; margin: 12px 0 6px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono);">
+                                💡 Key Engineering Contributions:
+                            </h4>
+                            <ul class="deep-dive-list">
+                                <li>
+                                    <strong>Computer Vision &amp; Deep Learning Detection:</strong> Deployed an Ultralytics YOLO and OpenCV pipeline on a Raspberry Pi single-board computer. Calibrated an overhead vision camera to classify geometric shapes (circles, hexagons, squares) and color signatures (red, green, blue) across an indexed circular sorting platter under varying ambient illumination.
+                                </li>
+                                <li>
+                                    <strong>Analytical Inverse Kinematics &amp; Motion Control:</strong> Formulated closed-form 2D planar inverse kinematics and vertical Z-axis prismatic displacement equations. Derived exact joint motor angles (&theta;1, &theta;2) and lead-screw steps, transmitting synchronized motion commands over a high-speed UART serial bridge from Python to an Arduino low-level motor controller.
+                                </li>
+                                <li>
+                                    <strong>Mechanical Design &amp; Rapid Prototyping:</strong> Designed a rigid 3D-printed chassis utilizing dual NEMA 17 stepper motors, timing-belt reduction drives, and linear guide rods with a precision lead-screw drive for vertical Z-travel. Integrated a fast-switching 12V electromagnetic end-effector capable of reliable rapid picking and placing.
+                                </li>
+                                <li>
+                                    <strong>Full-Stack Remote Dispatch Web GUI:</strong> Developed a responsive browser-based operator dashboard allowing users to select target objects by color and shape. The interface dispatches JSON command payloads to the Raspberry Pi backend, triggering automated sorting routines and real-time execution feedback.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-outcome-box" style="margin-top: 18px;">
+                            <strong>Engineering Outcome:</strong> Successfully built and demonstrated a fully autonomous pick-and-place cell operating with zero human intervention, seamlessly bridging web UI commands, AI object detection, and hardware kinematic execution.
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1515,18 +1593,27 @@
             }
         }
 
-        function openLightbox(imgElement) {
+        function openLightbox(imgElement, explicitCaption) {
             const modal = document.getElementById('lightboxModal');
             const modalImg = document.getElementById('lightboxImg');
             const modalCaption = document.getElementById('lightboxCaption');
             if (modal && modalImg) {
-                modalImg.src = imgElement.src;
-                const wrap = imgElement.closest('.project-gallery-wrap');
-                const captionEl = wrap ? wrap.querySelector('.gallery-caption') : null;
-                if (modalCaption && captionEl) {
-                    modalCaption.textContent = captionEl.textContent;
-                } else if (modalCaption) {
-                    modalCaption.textContent = imgElement.alt || '';
+                if (typeof imgElement === 'string') {
+                    modalImg.src = imgElement;
+                    if (modalCaption) {
+                        modalCaption.textContent = explicitCaption || '';
+                    }
+                } else {
+                    modalImg.src = imgElement.src;
+                    const wrap = imgElement.closest('.project-gallery-wrap');
+                    const captionEl = wrap ? wrap.querySelector('.gallery-caption') : null;
+                    if (modalCaption && explicitCaption) {
+                        modalCaption.textContent = explicitCaption;
+                    } else if (modalCaption && captionEl) {
+                        modalCaption.textContent = captionEl.textContent;
+                    } else if (modalCaption) {
+                        modalCaption.textContent = imgElement.alt || '';
+                    }
                 }
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
