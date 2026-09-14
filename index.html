@@ -1256,7 +1256,7 @@
                                     <strong>Closed-Loop Trunk Inclination Adaptation:</strong> Developed a dynamic tilt-correction algorithm utilizing upper and lower distance sensors on each detached gripper. When ascending inclined trunks, the system measures the differential distance offset and commands an articulated pitch joint to rotate the gripper plane parallel to the trunk surface prior to locking.
                                 </li>
                                 <li>
-                                    <strong>Fail-Safe 6-Phase Gait State Machine:</strong> Designed a sensor-triggered Finite State Machine (FSM) controlling sequential climbing: Anchored $\rightarrow$ Upper Release $\rightarrow$ Body Linear Extension $\rightarrow$ Diameter-Adaptive Upper Reclamp $\rightarrow$ Lower Release $\rightarrow$ Body Retraction $\rightarrow$ Lower Reclamp. Strictly enforces that at least one gripper unit maintains verified holding force before the other releases.
+                                    <strong>Fail-Safe 6-Phase Gait State Machine:</strong> Designed a sensor-triggered Finite State Machine (FSM) controlling sequential climbing: Anchored &rarr; Upper Release &rarr; Body Linear Extension &rarr; Diameter-Adaptive Upper Reclamp &rarr; Lower Release &rarr; Body Retraction &rarr; Lower Reclamp. Strictly enforces that at least one gripper unit maintains verified holding force before the other releases.
                                 </li>
                             </ul>
                         </div>
@@ -1355,7 +1355,7 @@
                             </h4>
                             <ul class="deep-dive-list">
                                 <li>
-                                    <strong>Analytical Inverse Kinematics (Arduino C++):</strong> Derived closed-form planar geometric inverse kinematics equations to map Cartesian coordinates $(x, y)$ into dual revolute joint angles (&theta;1, &theta;2) and vertical lead-screw step counts. Programmed the kinematics calculation engine directly on the Arduino Uno microcontroller for real-time trajectory execution.
+                                    <strong>Analytical Inverse Kinematics (Arduino C++):</strong> Derived closed-form planar geometric inverse kinematics equations to map Cartesian coordinates (x, y) into dual revolute joint angles (&theta;1, &theta;2) and vertical lead-screw step counts. Programmed the kinematics calculation engine directly on the Arduino Uno microcontroller for real-time trajectory execution.
                                 </li>
                                 <li>
                                     <strong>Microcontroller-to-Edge Serial Communication Bridge:</strong> Architected the UART serial communication protocol linking the Arduino Uno to the vision-processing Raspberry Pi 4. Structured the packet parsing to ingest target object coordinates, geometric shape classes, and color labels in real time.
